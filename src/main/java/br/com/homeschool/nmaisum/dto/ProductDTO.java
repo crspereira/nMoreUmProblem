@@ -30,6 +30,7 @@ public class ProductDTO implements Serializable {
 		name = entity.getName();
 		categories = entity.getCategories().stream()
 					.map(x -> new CategoryDTO(x)).collect(Collectors.toList());
+		//ordena a lista de categorias pindurada por nome asc
 		Collections.sort(categories, Comparator.comparing(CategoryDTO::getName));
 	}
 
