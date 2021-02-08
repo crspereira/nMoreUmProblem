@@ -8,7 +8,7 @@ import br.com.homeschool.nmaisum.entities.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long>{
 	
-	//Oreden a lista por nome. Não funciona na lista pindurada no produto.
+	//Ordena a lista por nome. Não funciona na lista pindurada no produto.
 	//Para isso é necessário ordenar no DTO
 	List<Category> findAllByOrderByNameAsc();
 }
